@@ -11,9 +11,9 @@
     <main
       class="container mx-auto flex h-screen items-center justify-center px-6"
     >
-      <article class="overflow-hidden rounded-lg w-96 md:w-[28rem]">
+      <article class="w-96 overflow-hidden rounded-lg md:w-[28rem]">
         <h1
-          class="border-b border-gray-100 py-6 text-center text-5xl font-semibold tracking-widest text-gray-100 bg-gray-600"
+          class="border-b border-gray-100 bg-gray-600 py-6 text-center text-5xl font-semibold tracking-widest text-gray-100"
         >
           Counter
         </h1>
@@ -21,14 +21,17 @@
           class="flex flex-col items-center justify-center gap-2 bg-rose-600 p-20"
         >
           <div
-            class="flex h-44 w-60 md:w-full items-center justify-center rounded-md bg-rose-700 p-3"
+            class="flex h-44 w-60 items-center justify-center rounded-md bg-rose-700 p-3 md:w-full"
           >
-            <p class="text-8xl font-semibold text-gray-100">0</p>
+            <p id="count-display" class="text-8xl font-semibold text-gray-100">
+              0
+            </p>
           </div>
-          <div
-            class="flex w-60 md:w-full gap-2 justify-between"
-          >
-            <div class="flex items-center justify-center rounded-md bg-rose-700 w-2/3 h-14 hover:bg-rose-800">
+          <div class="flex w-60 justify-between gap-2 md:w-full">
+            <div
+              id="btn-reset"
+              class="flex h-14 w-2/3 cursor-pointer select-none items-center justify-center rounded-md bg-rose-700 hover:bg-rose-800"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -44,7 +47,10 @@
                 />
               </svg>
             </div>
-            <div class="flex items-center justify-center rounded-md bg-rose-700 h-14 w-full hover:bg-rose-800">
+            <div
+              id="btn-increment"
+              class="flex h-14 w-full cursor-pointer select-none items-center justify-center rounded-md bg-rose-700 hover:bg-rose-800"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -59,7 +65,7 @@
                   d="M12 4.5v15m7.5-7.5h-15"
                 />
               </svg>
-            </divm>
+            </div>
           </div>
         </section>
       </article>
